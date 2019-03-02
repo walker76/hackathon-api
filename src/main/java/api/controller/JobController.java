@@ -1,11 +1,14 @@
 package api.controller;
 
 import api.domain.Job;
+import api.domain.JobStatus;
 import api.domain.JobType;
+import api.domain.JobUpdateRequest;
 import api.repository.JobRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/job")
@@ -22,9 +25,30 @@ public class JobController {
         return this.jobRepository.findAll();
     }
 
+    @GetMapping("/findById/{id}")
+    public Job findById(@PathVariable("id") String id){
+        Optional<Job> jobOptional = this.jobRepository.findById(id);
+        return jobOptional.isPresent() ? jobOptional.get() : null;
+    }
+
     @GetMapping("/findByJobType/{jobType}")
     public List<Job> getByJobType(@PathVariable("jobType") JobType jobType){
         return this.jobRepository.findAllByTypeIs(jobType);
+    }
+
+    @GetMapping("/findByJobStatus/{jobStatus}")
+    public List<Job> getByJobType(@PathVariable("jobStatus") JobStatus jobStatus){
+        return this.jobRepository.findAllByStatusIs(jobStatus);
+    }
+
+    @PutMapping("/updateJobStatus/")
+    public void getByJobType(@RequestBody JobUpdateRequest jobUpdateRequest){
+        Optional<Job> optionalJob = this.jobRepository.findById(jobUpdateRequest.getId());
+        if(optionalJob.isPresent()){
+            Job job = optionalJob.get();
+            job.setStatus(jobUpdateRequest.getStatus());
+            this.jobRepository.save(job);
+        }
     }
 
     @PutMapping("/insert")

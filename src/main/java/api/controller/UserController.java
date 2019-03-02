@@ -73,6 +73,7 @@ public class UserController {
 
     @PutMapping("/insert")
     public void insert(@RequestBody User user){
+        System.out.println(user);
         this.userRepository.insert(user);
     }
 

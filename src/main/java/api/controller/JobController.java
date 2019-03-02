@@ -16,8 +16,9 @@ public class JobController {
     private JobRepository jobRepository;
     private UserRepository userRepository;
 
-    public JobController(JobRepository jobRepository) {
+    public JobController(JobRepository jobRepository, UserRepository userRepository) {
         this.jobRepository = jobRepository;
+        this.userRepository = userRepository;
     }
 
     @GetMapping("/all")

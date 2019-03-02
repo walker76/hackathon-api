@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface JobRepository extends MongoRepository<Job, String> {
 
-    List<Job> findAllByTypeIs(JobType type);
+    List<Job> findAllByTypeEquals(JobType type);
     List<Job> findAllByStatusIs(JobStatus status);
 }

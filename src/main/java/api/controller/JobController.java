@@ -30,7 +30,7 @@ public class JobController {
 
     @GetMapping("/findByJobType/{jobType}")
     public List<Job> getByJobType(@PathVariable("jobType") String jobType){
-        return this.jobRepository.findAllByTypeIs(JobType.valueOf(jobType));
+        return this.jobRepository.findAllByTypeEquals(JobType.valueOf(jobType));
     }
 
     @GetMapping("/findByJobStatus/{jobStatus}")

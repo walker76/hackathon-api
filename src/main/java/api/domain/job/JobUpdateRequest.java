@@ -8,4 +8,5 @@ import lombok.Data;
 public class JobUpdateRequest {
     String id;
     JobStatus status;
+    String workerId;
 }

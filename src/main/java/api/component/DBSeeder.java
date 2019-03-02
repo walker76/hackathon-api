@@ -24,6 +24,7 @@ public class DBSeeder implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         jobRepository.deleteAll();
+        String userId = generateUniqueId().toString();
 
         // Implement adding default users
 
@@ -35,7 +36,8 @@ public class DBSeeder implements CommandLineRunner {
                 new Date(),
                 0,
                 0,
-                JobStatus.ACCEPTED
+                JobStatus.ACCEPTED,
+                userId
         ));
 
         jobRepository.insert(new Job(
@@ -46,7 +48,8 @@ public class DBSeeder implements CommandLineRunner {
                 new Date(),
                 0,
                 0,
-                JobStatus.ACCEPTED
+                JobStatus.ACCEPTED,
+                userId
         ));
 
         jobRepository.insert(new Job(
@@ -57,12 +60,13 @@ public class DBSeeder implements CommandLineRunner {
                 new Date(),
                 0,
                 0,
-                JobStatus.PENDING
+                JobStatus.PENDING,
+                userId
+
         ));
     }
 
-    private Integer generateUniqueId()
-    {
+    private Integer generateUniqueId() {
         int val = -1;
 
         do {

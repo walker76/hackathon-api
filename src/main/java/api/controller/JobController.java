@@ -47,6 +47,7 @@ public class JobController {
         if(optionalJob.isPresent()){
             Job job = optionalJob.get();
             job.setStatus(jobUpdateRequest.getStatus());
+            job.setWorkerId(jobUpdateRequest.getWorkerId());
             this.jobRepository.save(job);
         }
     }

@@ -1,9 +1,6 @@
 package api.controller;
 
-import api.domain.job.Job;
-import api.domain.job.JobStatus;
-import api.domain.job.JobType;
-import api.domain.job.JobUpdateRequest;
+import api.domain.job.*;
 import api.repository.JobRepository;
 import org.springframework.web.bind.annotation.*;
 
@@ -53,8 +50,9 @@ public class JobController {
     }
 
     @PutMapping("/insert")
-    public void insert(@RequestBody Job job){
-        this.jobRepository.insert(job);
+    public void insert(@RequestBody JobRequest jobRequest){
+        Job newJob = new Job(jobRequest);
+        this.jobRepository.insert(newJob);
     }
 
     @PostMapping("/update")

@@ -17,7 +17,6 @@ public class Job {
     String title;
     JobType type;
     String description;
-    Date time;
     long lat;
     long lang;
     JobStatus status;
@@ -25,24 +24,34 @@ public class Job {
     String posterId;
     String workerId;
 
-    public Job(String id, String title, JobType type, String description, Date time, long lat, long lang, JobStatus status, String posterId) {
+    public Job(JobRequest request){
+        this.id = generateUniqueId();
+        this.title = request.getTitle();
+        this.description = request.getDescription();
+        this.lang = request.getLang();
+        this.lat = request.getLat();
+        this.type = request.getType();
+        this.posterId = request.getPosterId();
+        this.status = JobStatus.PENDING;
+
+    }
+
+    public Job(String id, String title, JobType type, String description, long lat, long lang, JobStatus status, String posterId) {
         this.id = id;
         this.title = title;
         this.type = type;
         this.description = description;
-        this.time = time;
         this.lat = lat;
         this.lang = lang;
         this.status = status;
         this.posterId = posterId;
     }
 
-    public Job(String title, JobType type, String description, Date time, long lat, long lang, JobStatus status, String posterId) {
+    public Job(String title, JobType type, String description, long lat, long lang, JobStatus status, String posterId) {
         this.id = generateUniqueId();
         this.title = title;
         this.type = type;
         this.description = description;
-        this.time = time;
         this.lat = lat;
         this.lang = lang;
         this.status = status;

@@ -29,8 +29,8 @@ public class JobController {
     }
 
     @GetMapping("/findByJobType/{jobType}")
-    public List<Job> getByJobType(@PathVariable("jobType") JobType jobType){
-        return this.jobRepository.findAllByTypeIs(jobType);
+    public List<Job> getByJobType(@PathVariable("jobType") String jobType){
+        return this.jobRepository.findAllByTypeIs(JobType.valueOf(jobType));
     }
 
     @GetMapping("/findByJobStatus/{jobStatus}")

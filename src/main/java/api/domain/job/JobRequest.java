@@ -12,5 +12,5 @@ public class JobRequest {
     JobType type;
     String description;
     Long lat, lang;
-    String posterId;
+    String email;
 }

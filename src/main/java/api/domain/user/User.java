@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 public class User {
     @Id
-    String id;
+    String email;
     List<String> jobsPosted;
     List<String> jobsWorking;
 
-    User(String id){
-        this.id = id;
+    User(String email){
+        this.email = email;
         this.jobsPosted = new ArrayList<>();
         this.jobsWorking = new ArrayList<>();
     }

@@ -1,9 +1,11 @@
 package api.controller;
 
+import api.domain.job.Job;
 import api.domain.user.User;
 import api.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +28,47 @@ public class UserController {
     public User findById(@PathVariable("id") String id){
         Optional<User> userOptional = this.userRepository.findById(id);
         return userOptional.isPresent() ? userOptional.get() : null;
+    }
+
+    @GetMapping("/findJobsById/{id}")
+    public List<String> findJobsById(@PathVariable("id") String id){
+        Optional<User> userOptional = this.userRepository.findById(id);
+        List<String> ret = new ArrayList<>();
+
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            List<String> posted = user.getJobsPosted();
+            List<String> working = user.getJobsWorking();
+            List<String> combined = new ArrayList<>();
+            combined.addAll(working);
+            combined.addAll(posted);
+            return combined;
+        }
+        return ret;
+    }
+
+    @GetMapping("/findWorkingJobsById/{id}")
+    public List<String> findWorkingJobsById(@PathVariable("id") String id){
+        Optional<User> userOptional = this.userRepository.findById(id);
+        List<String> ret = new ArrayList<>();
+
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            return user.getJobsWorking();
+        }
+        return ret;
+    }
+
+    @GetMapping("/findPostingJobsById/{id}")
+    public List<String> findPostingJobsById(@PathVariable("id") String id){
+        Optional<User> userOptional = this.userRepository.findById(id);
+        List<String> ret = new ArrayList<>();
+
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            return user.getJobsPosted();
+        }
+        return ret;
     }
 
     @PutMapping("/insert")

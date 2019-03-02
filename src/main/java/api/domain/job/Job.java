@@ -31,7 +31,7 @@ public class Job {
         this.lang = request.getLang();
         this.lat = request.getLat();
         this.type = request.getType();
-        this.posterId = request.getPosterId();
+        this.posterId = request.getEmail();
         this.status = JobStatus.PENDING;
 
     }

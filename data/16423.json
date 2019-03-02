@@ -1,0 +1,93 @@
+{
+  "id": "16423",
+  "title": "X-Men 2099 (1993 - 1996)",
+  "description": "",
+  "resourceURI": "http://gateway.marvel.com/v1/public/series/16423",
+  "startYear": 1993,
+  "endYear": 1996,
+  "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/9/40/5845c61cc4dd1/portrait_medium.jpg",
+  "issueCount": 9,
+  "issues": [
+    {
+      "id": 43370,
+      "title": "X-Men 2099 (1993) #9",
+      "issueNumber": 9.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43370",
+      "date": "1994-06-01T00:00:00-0400",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/5845d12e0c3f5/portrait_medium.jpg"
+    },
+    {
+      "id": 43369,
+      "title": "X-Men 2099 (1993) #8",
+      "issueNumber": 8.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43369",
+      "date": "1994-05-01T00:00:00-0400",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/3/d0/5845d13df1928/portrait_medium.jpg"
+    },
+    {
+      "id": 43368,
+      "title": "X-Men 2099 (1993) #7",
+      "issueNumber": 7.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43368",
+      "date": "1994-04-01T00:00:00-0500",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/9/20/5845d0feb0a27/portrait_medium.jpg"
+    },
+    {
+      "id": 43367,
+      "title": "X-Men 2099 (1993) #6",
+      "issueNumber": 6.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43367",
+      "date": "1994-03-01T00:00:00-0500",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/d/f0/5845d11642598/portrait_medium.jpg"
+    },
+    {
+      "id": 43366,
+      "title": "X-Men 2099 (1993) #5",
+      "issueNumber": 5.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43366",
+      "date": "1994-02-01T00:00:00-0500",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5845d0edc5028/portrait_medium.jpg"
+    },
+    {
+      "id": 43365,
+      "title": "X-Men 2099 (1993) #4",
+      "issueNumber": 4.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43365",
+      "date": "1994-01-01T00:00:00-0500",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/a/20/5845d18f9dfa4/portrait_medium.jpg"
+    },
+    {
+      "id": 43364,
+      "title": "X-Men 2099 (1993) #3",
+      "issueNumber": 3.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43364",
+      "date": "1993-12-01T00:00:00-0500",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/7/90/5845d17d7f8e8/portrait_medium.jpg"
+    },
+    {
+      "id": 43363,
+      "title": "X-Men 2099 (1993) #2",
+      "issueNumber": 2.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43363",
+      "date": "1993-11-01T00:00:00-0500",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/2/03/5845d1550324c/portrait_medium.jpg"
+    },
+    {
+      "id": 43362,
+      "title": "X-Men 2099 (1993) #1",
+      "issueNumber": 1.0,
+      "resourceURI": "http://gateway.marvel.com/v1/public/comics/43362",
+      "date": "1993-10-01T00:00:00-0400",
+      "price": 0.0,
+      "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/9/40/5845c61cc4dd1/portrait_medium.jpg"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 package api.controller;
 
 import api.domain.job.*;
+import api.domain.user.User;
 import api.repository.JobRepository;
+import api.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +14,7 @@ import java.util.Optional;
 public class JobController {
 
     private JobRepository jobRepository;
+    private UserRepository userRepository;
 
     public JobController(JobRepository jobRepository) {
         this.jobRepository = jobRepository;
@@ -52,6 +55,9 @@ public class JobController {
     @PutMapping("/insert")
     public void insert(@RequestBody JobRequest jobRequest){
         Job newJob = new Job(jobRequest);
+        User user = userRepository.findById(newJob.getPosterId()).get();
+        user.getJobsPosted().add(newJob.getId());
+        userRepository.save(user);
         this.jobRepository.insert(newJob);
     }
 

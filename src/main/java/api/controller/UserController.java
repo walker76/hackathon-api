@@ -24,13 +24,13 @@ public class UserController {
         return this.userRepository.findAll();
     }
 
-    @GetMapping("/findById/{id}")
+    @GetMapping("/findById/{id:.+}")
     public User findById(@PathVariable("id") String id){
         Optional<User> userOptional = this.userRepository.findById(id);
         return userOptional.isPresent() ? userOptional.get() : null;
     }
 
-    @GetMapping("/findJobsById/{id}")
+    @GetMapping("/findJobsById/{id:.+}")
     public List<String> findJobsById(@PathVariable("id") String id){
         Optional<User> userOptional = this.userRepository.findById(id);
         List<String> ret = new ArrayList<>();
@@ -47,7 +47,7 @@ public class UserController {
         return ret;
     }
 
-    @GetMapping("/findWorkingJobsById/{id}")
+    @GetMapping("/findWorkingJobsById/{id:.+}")
     public List<String> findWorkingJobsById(@PathVariable("id") String id){
         Optional<User> userOptional = this.userRepository.findById(id);
         List<String> ret = new ArrayList<>();
@@ -59,7 +59,7 @@ public class UserController {
         return ret;
     }
 
-    @GetMapping("/findPostingJobsById/{id}")
+    @GetMapping("/findPostingJobsById/{id:.+}")
     public List<String> findPostingJobsById(@PathVariable("id") String id){
         Optional<User> userOptional = this.userRepository.findById(id);
         List<String> ret = new ArrayList<>();
@@ -81,7 +81,7 @@ public class UserController {
         this.userRepository.save(user);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id:.+}")
     public void delete(@PathVariable("id") String id){
         this.userRepository.deleteById(id);
     }

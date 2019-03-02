@@ -1,3 +1,3 @@
 # hackathon-api
 
-# Let's get this bread bois (and katie)!!
+# Let's get this bread bois (and katy)!!

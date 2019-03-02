@@ -1,4 +1,4 @@
-package api.domain;
+package api.domain.job;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

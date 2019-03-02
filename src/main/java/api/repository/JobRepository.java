@@ -1,8 +1,8 @@
 package api.repository;
 
-import api.domain.Job;
-import api.domain.JobStatus;
-import api.domain.JobType;
+import api.domain.job.Job;
+import api.domain.job.JobStatus;
+import api.domain.job.JobType;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,9 @@
 package api.controller;
 
-import api.domain.Job;
-import api.domain.JobStatus;
-import api.domain.JobType;
-import api.domain.JobUpdateRequest;
+import api.domain.job.Job;
+import api.domain.job.JobStatus;
+import api.domain.job.JobType;
+import api.domain.job.JobUpdateRequest;
 import api.repository.JobRepository;
 import org.springframework.web.bind.annotation.*;
 

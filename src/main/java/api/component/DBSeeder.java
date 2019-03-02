@@ -1,8 +1,8 @@
 package api.component;
 
-import api.domain.Job;
-import api.domain.JobStatus;
-import api.domain.JobType;
+import api.domain.job.Job;
+import api.domain.job.JobStatus;
+import api.domain.job.JobType;
 import api.repository.JobRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

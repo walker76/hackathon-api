@@ -1,4 +1,4 @@
-package api.domain;
+package api.domain.job;
 
 public enum JobStatus {
     PENDING, ACCEPTED, CANCELLED

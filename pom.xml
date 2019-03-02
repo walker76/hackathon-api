@@ -8,10 +8,10 @@
         <version>2.1.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>comicDB</groupId>
-    <artifactId>comic-api</artifactId>
+    <groupId>wacode</groupId>
+    <artifactId>hackathon-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>comic-api</name>
+    <name>hackathon-api</name>
     <description></description>
 
     <properties>

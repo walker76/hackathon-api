@@ -22,7 +22,7 @@ public class DBSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+/*
         jobRepository.deleteAll();
         String userId = generateUniqueId().toString();
 
@@ -60,7 +60,7 @@ public class DBSeeder implements CommandLineRunner {
                 JobStatus.PENDING,
                 userId
 
-        ));
+        ));*/
     }
 
     private Integer generateUniqueId() {

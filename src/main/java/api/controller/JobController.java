@@ -44,10 +44,19 @@ public class JobController {
 
     @PutMapping("/updateJobStatus/")
     public void getByJobType(@RequestBody JobUpdateRequest jobUpdateRequest){
+        System.out.println(jobUpdateRequest);
         Optional<Job> optionalJob = this.jobRepository.findById(jobUpdateRequest.getId());
         if(optionalJob.isPresent()){
             Job job = optionalJob.get();
             job.setStatus(jobUpdateRequest.getStatus());
+            if(jobUpdateRequest.getStatus().equals(JobStatus.ACCEPTED)){
+                Optional<User> optionalUser = userRepository.findById(jobUpdateRequest.getWorkerId());
+                if(optionalUser.isPresent()){
+                    User user = optionalUser.get();
+                    user.getJobsWorking().add(jobUpdateRequest.getId());
+                    userRepository.save(user);
+                }
+            }
             job.setWorkerId(jobUpdateRequest.getWorkerId());
             this.jobRepository.save(job);
         }
